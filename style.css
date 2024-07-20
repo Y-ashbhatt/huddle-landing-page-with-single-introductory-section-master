@@ -1,19 +1,103 @@
-:root{
-    --Violet: hsl(257, 40%, 49%);
---Soft-Magenta: hsl(300, 69%, 71%);
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
 }
 
-
-body{
- background-color: var(--Violet);
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.intro_link{
-    border: 1px solid white;
+body {
+  min-height: 100vh;
+  color: #fff;
 }
 
-.intro_link img{
-    filter: invert(100%) sepia(0%) saturate(3635%) hue-rotate(87deg) brightness(99%) contrast(112%);
-    width: 40px;
+.intro {
+  background: url(./images/bg-mobile.svg), var(--Violet);
+  background-repeat: no-repeat;
+  padding: 30px 20px;
+  background-size: contain;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 37px;
+}
+
+.intro_main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 13.9vw;
+}
+
+.intro_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 90%;
+  }
+}
+
+.intro_content {
+  padding: 0px 22px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+  margin-top: 45px;
+  font-family: "Poppins", sans-serif;
+}
+
+.description {
+  margin-top: 23px;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  padding: 0.75rem 5rem;
+  color: var(--Violet);
+  font-size: 1rem;
+  margin: 27px auto 0 auto;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  color: white;
+  background-color: var(--Soft-Magenta);
+  transform: translateY(-3px);
+}
+
+.intro_socials {
+  display: flex;
+  align-self: center;
+  margin: 80px 0 20px 0;
+  gap: 1rem;
+}
+
+.intro_link img {
+  filter: invert(100%) sepia(0%) saturate(3635%) hue-rotate(87deg)
+    brightness(99%) contrast(112%);
+  width: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 6.5px;
+}
+
+.intro_link img:hover {
+  border: 1px solid var(--Soft-Magenta);
+  transform: scale(1.15);
 }
