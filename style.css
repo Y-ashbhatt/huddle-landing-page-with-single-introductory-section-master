@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+
 :root {
   --Violet: hsl(257, 40%, 49%);
   --Soft-Magenta: hsl(300, 69%, 71%);
@@ -13,22 +17,24 @@
 
 body {
   color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .intro {
   background: url(./images/bg-mobile.svg), var(--Violet);
   background-repeat: no-repeat;
   padding: 30px 20px;
- 
+  background-size: contain;    
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .logo {
   height: 37px;
+  display: block;
 }
 
 .intro_main {
@@ -73,6 +79,7 @@ body {
   margin: 27px auto 0 auto;
   border-radius: 2rem;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+ 
 }
 
 .btn:hover {
@@ -101,14 +108,52 @@ body {
   transform: scale(1.15);
 }
 
-@media screen and (max-width: 600px) {
-    .intro{
-    background-size: contain;    
-    }
-}
+
 @media screen and (min-width: 900px) {
     .intro{
         padding: 55px 70px 40px 70px;
-        
+        background: url(./images/bg-desktop.svg), var(--Violet);
     }
-}
+
+    .logo {
+      height: 55px;
+      
+    }
+
+    .intro_main{
+      flex-flow: row;
+    margin-top: 5.9vw;
+    }
+
+    .intro_image{
+      flex: 1 0 54.5%;
+      img{
+        width: 100%;
+      }
+    }
+
+    .intro_content{
+      padding: 0px 22px;
+    margin: 0 0 0 34px;
+    text-align: start;
+    }
+
+    .title{
+      font-size: 2.47rem;
+    margin-top: 45px;
+    line-height: 3.7rem;
+    }
+
+    .description{
+      margin-top: 23px;
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+    }
+
+    .intro_socials{
+      display: flex;
+    align-self: flex-end;
+    margin: 0;
+    }
+
+  }
